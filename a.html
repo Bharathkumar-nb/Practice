@@ -1,0 +1,49 @@
+<html>
+<head>
+<style type="text/css">
+
+#a,#b{
+	 display: none; 
+}
+
+</style>
+
+<script type="text/javascript">
+
+function foo (event) {
+	if(event.target.id == "b1")
+	{
+		document.getElementById('a').style.display = "block";
+		document.getElementById('b').style.display = "none";
+	}
+	else
+	{
+		document.getElementById('b').style.display = "block";
+		document.getElementById('a').style.display = "none";
+	}
+
+}
+
+</script>
+</head>
+
+<body>
+<div id="a">
+sdhgjs
+</div>
+<div id="b">
+bharath
+</div>
+<button id="b1" onclick="foo(event)">click me</button>
+<button id="b2" onclick="foo(event)">click me</button>
+
+<form>
+<div class="btn-group" data-toggle-name="is_private" data-toggle="buttons-radio" >
+  <button type="button" value="0" class="btn" data-toggle="button">Public</button>
+  <button type="button" value="1" class="btn" data-toggle="button">Private</button>
+</div>
+<input type="hidden" name="is_private" value="0" />
+</form>
+
+</body>
+</html>

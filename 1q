@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std ;
+
+void print(int a[] , int n)
+{
+	int i ;
+	for(i = 0 ; i < n ; ++i)
+	{
+		if(i < n-1)
+		{
+			cout << (char)(a[i] + 64) << endl ;
+			if((a[i] * 10 + a[i+1]*1) <= 26)
+			    cout << (char)((a[i] * 10 + a[i+1]*1) + 64) << endl ;
+		}
+		cout << (char)(a[i]+64)  << endl;
+
+		cout << "printed \n" ;
+	}
+}
+int main()
+{
+//	int num = 1 ;
+//	int* a = new int() ;
+//	cout << *a << endl ;
+//	void* a ;
+	//*a = *a + *a ;
+	//int *b = (int*) a ;
+
+	int n ;
+	int i ;
+	cin >> n ;
+	int a[n] ;
+
+	for(i = 0 ; i < n ; ++i)
+		cin >> a[i] ;
+
+	print(a , n) ;
+	
+	
+	return 0 ;
+}
